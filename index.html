@@ -1,0 +1,360 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Columbia University EECS E4764 IoT Project Report #0</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<!-- <span class="image avatar48"><img src="images/appIcon.jpeg" alt="" /></span> -->
+							<h1 id="title">MoodMeter</h1>
+							<p>Columbia University <br>
+								EECS E4764 Fall'22 Internet of Things<br>
+								Intelligent and Connected Systems<br>
+								Team 21 Project Report
+							</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<!--
+
+								Prologue's nav expects links in one of two formats:
+
+								1. Hash link (scrolls to a different section within the page)
+
+								   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
+
+								2. Standard link (sends the user to another page/site)
+
+								   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
+
+							-->
+							<ul>
+								<li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Abstract</span></a></li>
+								<li><a href="#motivation" id="motivation-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Motivation</span></a></li>
+								<li><a href="#system" id="system-link" class="skel-layers-ignoreHref"><span class="icon fa-th">System</span></a></li>
+								<li><a href="#results" id="results-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Results</span></a></li>
+								<li><a href="#references" id="references-link" class="skel-layers-ignoreHref"><span class="icon fa-th">References</span></a></li>
+								<li><a href="#team" id="team-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Our Team</span></a></li>
+								<li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+
+				</div>
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+								<iframe width="560" height="315" src="https://youtu.be/pyvXGBhK5cE" frameborder="0" allowfullscreen></iframe>
+
+								<h2 class="alt">MoodMeter</h2>
+								<p>Project MoodMeter is an all-in-one integrated health system that acquires the user's vitals and displays the results in the MoodMeter app.</p>
+								<p>The MoodmMeter's sensors record heartrate, blood oximetry, body temperature, and skin resistance data. As the data is collected, it is dispatched to a PyMongo database and plotted using the Matplotlib library. The MoodMeter app requests the recently plotted data and displays it in a easy to read view to the user. From the readings of the graph the app can detect shifts in the user's mood and alerts the user if they are feeling anxious.</p>
+
+
+							<footer>
+								<a href="#motivation" class="button scrolly">Motivation</a>
+							</footer>
+
+						</div>
+					</section>
+
+				<!-- Portfolio -->
+					<section id="motivation" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Motivation</h2>
+							</header>
+
+							<p align="left">After our pre-project labs were over we were assigned to create an IoT device. With so many IoT devices out on the market, it was difficult to propose a novel idea.</p>
+
+							<a href="#" class="image centered"><img src="images/light_bulb.jpeg" alt=""/>
+
+							<p align="left">
+							</p>
+
+							<p align="left">Attending Columbia University has proven to be quite a stressful journey, to say the least. With multitudes of projects, exams, and homework assignments due, a student can begin to feel anxious. We see this firsthand not only in ourselves but in our peers as well.</p>
+
+							<a href="#" class="image centered"><img src="images/anxietyIcon.jpeg" alt=""/>
+
+							<p align="left">
+							</p>
+
+							<p align="left">With this in mind, we wanted to develop an IoT device that would measure the vitals of a user and deduce how they were feeling. Alongside the device the integrated app would deduce and notify the user of possible feelings of anxiety.</p>
+
+							<a href="#" class="image centered"><img src="images/appIcon.jpeg" alt=""/>
+
+						</div>
+					</section>
+
+
+					<section id="system" class="three">
+						<div class="container">
+
+							<header>
+								<h2>System</h2>
+							</header>
+
+							<!-- <p align="left">Remember to use combination of descriptions, photos, and figures</p> -->
+
+							<h3 align="left">Architecture</h3>
+
+							<a href="#" class="image fit"><img src="images/systemArchitecture.png" alt=""/>
+
+							<p align="left">
+							</p>
+
+							<p align="left"> At the center of our block diagram is the brain of our system architecture, the Huzzah Feather ESP 8266. Connected to the ESPs I2C and Analog to Digital converter pins are the temperature sensor, heart rate and blood oximetry sensor, and lastly the Galvanic Skin Response sensor (GSR). The ESP sends the data from the sensors to the Amazon Web Services (AWS) database. The MoodMeter App requests the data from the server. The graphs are displayed on the app letting the user easily see the current status.</p>
+
+
+							<h3 align="left">Hardware Components</h3>
+
+							<p align="left">&#x2022; Huzzah Feather ESP 8226</p>
+
+							<p align="left">&#x2022; SparkFun Pulse Oximeter and Heart Rate Sensor - MAX30101 & MAX32664 (Qwiic)</p>
+
+							<p align="left">&#x2022; Songhe GY-906 MLX90614 MLX90614ESF Non Contact IR Infrared Temperature Sensor Module</p>
+
+							<p align="left">&#x2022; Galvanic Skin Response Sensor</p>
+
+							<h3 align="left">Prototype</h3>
+
+							<h1 align="left">Circuit:</h1>
+
+							<article class="item">
+							<a href="#" class="image fit"><img src="images/circuit.png" alt=""/>
+							</a>
+								<header>
+									<h3>This is the prototype circuit, final circuit does not include Bluetooth module.</h3>
+								</header>
+							</article>
+
+							<p align="left">
+							</p>
+
+							<h1 align="left">App:</h1>
+
+							<article class="item">
+							<a href="#" class="image fit"><img src="images/appPrototype.png" alt=""/>
+							</a>
+								<header>
+									<h3>This is the prototype app, final app only features the different graphs of each of the readings as shown in the Results section.</h3>
+								</header>
+							</article>
+
+						</div>
+					</section>
+
+
+					<section id="results" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Results</h2>
+							</header>
+
+							<h1 align="left">Hardware:</h1>
+
+							<article class="item">
+								<a href="#" class="image fit"><img src="images/hardwarePic.jpeg" alt="" /></a>
+								<header>
+									<h3>This image shows the hardware connected together.</h3>
+								</header>
+							</article>
+
+							<h1 align="left">App:</h1>
+
+							<article class="item">
+								<a href="#" class="image fit"><img src="images/appGraphs1.PNG" alt="" /></a>
+								<header>
+									<h3>This imaged shows the app displaying the GSR Data and Temperature Data.</h3>
+								</header>
+							</article>
+
+							<article class="item">
+								<a href="#" class="image fit"><img src="images/appGraphs2.PNG" alt="" /></a>
+								<header>
+									<h3>This imaged shows the app displaying the Heart Rate Data and Blood Oxygen Data.</h3>
+								</header>
+							</article>
+
+							<p align="left">
+							</p>
+
+							<p align="left">As can be seen, we were only able to implement the four graphs of each of the sensor's data readings. For most of the project's development phase, we struggled with sending the data to the app in an easy-to-plot format. As a result, we decided to plot the readings using the Matlib library and display those plots in the app. Our hardware stayed the same except for the BlueTooth module since we decided to implement an HTTP GET request to acquire the data. All in all, we want to thank Professor Xiaofan (Fred) Jiang and everyone from the department that made this project possible.</p>
+
+
+
+						</div>
+					</section>
+
+					<section id="references" class="three">
+						<div class="container">
+
+							<header>
+								<h2>References</h2>
+							</header>
+
+							<h1 align="left">&#x2022; Links to Products Used:</h1>
+
+							<p align="left">	https://www.adafruit.com/product/2821?gclid=Cj0KCQiAqOucBhDrARIsAPCQL1b03CVQL9v1R6xIv5JpvvgaSxiwBfEuVwbSSJ9QIkxbS2ES_ABSeG8aAqymEALw_wcB</p>
+
+							<p align="left">	https://www.digikey.com/short/v737rv7t</p>
+
+							<p align="left">	https://www.amazon.com/MLX90614ESF-Non-Contact-Infrared-Temperature-Arduino/dp/B07YZVDWWB/ref=asc_df_B07YZVDWWB/?tag=hyprod-20&linkCode=df0&hvadid=459719509802&hvpos=&hvnetw=g&hvrand=13826307516073632272&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9073479&hvtargid=pla-938620336480&psc=1</p>
+
+							<p align="left">	https://www.sparkfun.com/products/15219</p>
+
+							<h1 align="left">&#x2022; References to Images Used:</h1>
+
+							<p align="left">	https://www.istockphoto.com/vector/stressed-angry-confused-woman-line-icon-female-face-with-question-mark-thunder-bolt-gm1323649790-409230805</p>
+
+							<p align="left">	https://www.istockphoto.com/vector/light-bulb-idea-lamp-outline-icon-vector-gm960813498-262365917</p>
+
+
+						</div>
+					</section>
+
+
+				<!-- About Me -->
+					<section id="team" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Our Team</h2>
+							</header>
+
+							<!-- <a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a> -->
+
+
+							<div class="row">
+								<div class="4u 12u$(mobile)">
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/eliotPic.jpeg" alt="" /></a>
+										<header>
+											<h3>Eliot Flores Portillo</h3>
+											<p>Electrical Engineering</p>
+											<p>Graduate Student</p>
+										</header>
+									</article>
+								</div>
+								<div class="4u 12u$(mobile)">
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/patPic.jpeg" alt="" /></a>
+										<header>
+											<h3>Patricio Tapia</h3>
+											<p>Undergraduate Computer Engineering</p>
+										</header>
+									</article>
+								</div>
+								<div class="4u$ 12u$(mobile)">
+									<article class="item">
+										<a href="#" class="image fit"><img src="images/jamesPic.jpeg" alt="" /></a>
+										<header>
+											<h3>James Phan</h3>
+											<p>Undergraduate Computer Engineering</p>
+										</header>
+									</article>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+				<!-- Contact -->
+					<section id="contact" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Contact</h2>
+							</header>
+
+							<p align="left">
+								<strong>Eliot Flores Portillo: </strong>esf2150@columbia.edu</br>
+								<strong>Patricio Tapia: </strong>pet2119@columbia.edu</br>
+								<strong>James Phan: </strong>bnp2113@columbia.edu</br>
+							</br>
+								<strong>Columbia University </strong><a href="http://www.ee.columbia.edu">Department of Electrical Engineering</a><br>
+								<!-- <strong>Class Website:</strong>
+									<a href="https://edblogs.columbia.edu/eecs4764-001-2019-3/">Columbia University EECS E4764 Fall '22 IoT</a></br> -->
+								<strong>Instructor:</strong> <a href="http://fredjiang.com/">Professsor Xiaofan (Fred) Jiang</a>
+							</p>
+
+
+							<!-- <form method="post" action="#">
+								<div class="row">
+									<div class="6u 12u$(mobile)"><input type="text" name="name" placeholder="Name" /></div>
+									<div class="6u$ 12u$(mobile)"><input type="text" name="email" placeholder="Email" /></div>
+									<div class="12u$">
+										<textarea name="message" placeholder="Message"></textarea>
+									</div>
+									<div class="12u$">
+										<input type="submit" value="Send Message" />
+									</div>
+								</div>
+							</form> -->
+
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; IoT Project | All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollzer.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
